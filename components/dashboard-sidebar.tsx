@@ -11,6 +11,7 @@ import {
   Users,
   Activity,
   ClipboardList,
+  UserCircle,
 } from "lucide-react"
 
 interface DashboardSidebarProps {
@@ -27,12 +28,15 @@ export function DashboardSidebar({ profile }: DashboardSidebarProps) {
     { href: "/dashboard/tasks", label: "Tasks", icon: CheckSquare },
     { href: "/dashboard/members", label: "Team Members", icon: Users },
     { href: "/dashboard/activity", label: "Activity Log", icon: Activity },
+    { href: "/dashboard/profile", label: "My Profile", icon: UserCircle },
   ]
 
   const memberLinks = [
     { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
     { href: "/dashboard/my-tasks", label: "My Tasks", icon: CheckSquare },
+    { href: "/dashboard/members", label: "Team Members", icon: Users },
     { href: "/dashboard/activity", label: "Activity Log", icon: Activity },
+    { href: "/dashboard/profile", label: "My Profile", icon: UserCircle },
   ]
 
   const links = isAdmin ? adminLinks : memberLinks
